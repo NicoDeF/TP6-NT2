@@ -1,11 +1,14 @@
 <template>
 
   <section class="src-components-usuarios-registrados">
-    <h1>DATOS INGRESADOS EN FORMULARIO</h1>
+
+    <h1 class="display-3">Usuarios registrados en formulario</h1>
 
       <div class="table-responsive">
-          <table class="table">
+          <table class="table table-dark">
+       
             <tr class="bg-success text-white">
+              
               <th>Nombre</th>
               <th>Edad</th>
               <th>Email</th>
@@ -21,9 +24,6 @@
             </tr>
           </table>
           </div>
-
-
-
 
   </section>
 
@@ -45,12 +45,12 @@
     },
     methods: {
 
-      //pedido de los datos almacenados en el backend - GET
+      //pedido de los datos  - GET
       async getDatosForm(){
         try {
       let response= await this.axios(this.url)
       console.log(response.data)
-      this.datosForm=response.data;    // cargo el array de datos con los datos del form que viene del backend
+      this.datosForm=response.data;  
         } catch (error) {
           console.log('get error' , error)
         }
@@ -63,11 +63,17 @@
     }
 }
 
-
 </script>
 
 <style scoped lang="css">
-  .src-components-usuarios-registrados {
+  h1 {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+background: #bfd255; /* Old browsers */
+background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
 
   }
+  
 </style>

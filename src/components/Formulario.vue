@@ -8,14 +8,14 @@
             <!-- formulario con el evento submit(apretar botón) llama a metodo enviar  -->
             <form novalidate autocomplete="off" @submit.prevent="enviar()">
 
-                <!-- ingreso de dato nombre -->
+                <!-- Nombre -->
                 <div class="form-group">
                     <label for="nombre"> Nombre </label>
                     <input type="text" id="nombre" class="form-control" v-model="$v.f.nombre.$model">
                 </div>
 
 
-                <!-- cartel de validación nombre -->
+                <!-- Validación nombre -->
 
                 <div v-if="$v.f.nombre.$error && $v.f.nombre.$dirty" class="alert alert-danger mt-1">
                     <div v-if="$v.f.nombre.required.$invalid">Este campo es requerido</div>
@@ -24,26 +24,26 @@
 
                 </div>
 
-                <!-- ingreso de dato edad -->
+                <!-- Edad -->
                 <div class="form-group">
                     <label for="edad"> Edad </label>
                     <input type="number" id="edad" class="form-control" v-model="$v.f.edad.$model">
                 </div>
 
-                <!-- cartel de validación edad -->
+                <!-- Validación edad -->
                 <div v-if="$v.f.edad.$error && $v.f.edad.$dirty" class="alert alert-danger mt-1">
                     <div v-if="$v.f.edad.required.$invalid">Este campo es requerido</div>
                     <div v-else-if="$v.f.edad.between.$invalid">La edad valida es entre 18 y 120 años</div>
 
                 </div>
 
-                <!-- ingreso de dato email -->
+                <!-- Email -->
                 <div class="form-group">
                     <label for="email"> Email </label>
                     <input type="text" id="email" class="form-control" v-model.trim="$v.f.email.$model">
                 </div>
 
-                <!-- cartel de validación email -->
+                <!-- Validación email -->
                 <div v-if="$v.f.email.$error && $v.f.email.$dirty" class="alert alert-danger mt-1">
                     <div v-if="$v.f.email.required.$invalid">Este campo es requerido</div>
                     <div v-else-if="!$v.f.email.required.$invalid">Este campo tiene que ser un email</div>
@@ -130,7 +130,7 @@ export default {
       this.$v.$reset();
     },
 
-    // REINICIO DE LOS DATOS- PONE EN BLANCO LAS CASILLAS COMPLETADAS 
+    // RESET DE LOS DATOS- 
     resetCasillas() {
       return {
         nombre: '',

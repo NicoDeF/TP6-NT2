@@ -1,6 +1,8 @@
 <template>
-
+<header>
 <NavBar />
+</header>
+<br>
 <router-view/>
 </template>
 
@@ -23,5 +25,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+header {
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    text-align: center;
 }
 </style>

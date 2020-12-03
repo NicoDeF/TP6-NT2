@@ -1,6 +1,8 @@
 <template>
 
   <section class="src-components-home">
+
+    
     <h1>Bienvenidos</h1>
   </section>
 

@@ -3,7 +3,7 @@
   <section class="src-components-nav-bar">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" >
-  <router-link to="/">
+  <router-link to="/Home">
   <a class="navbar-brand" href="#">Inicio</a>
   </router-link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
